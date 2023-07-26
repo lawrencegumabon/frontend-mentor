@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CHECKER  */
+
+.invalid-input {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+}
+
+.displayError {
+  display: block;
+}

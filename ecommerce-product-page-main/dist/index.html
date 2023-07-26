@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/dist/output.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="font-Kumbh max-w-screen-2xl m-auto">
+    <header
+      class="flex items-center p-8 justify-between md:justify-start md:gap-10 md:fixed md:border-b-[1px] w-full top-0 left-0 right-0 bg-White z-10"
+    >
+      <div class="flex items-center gap-4">
+        <img
+          src="/images/icon-menu.svg"
+          alt="Menu"
+          class="w-6 md:hidden"
+          id="burger"
+        />
+        <img src="/images/logo.svg" alt="Logo" class="w-44" />
+      </div>
+      <nav class="md:flex md:items-center md:justify-between md:w-full">
+        <ul
+          class="hidden text-Dark-grayish-blue absolute left-[50%] w-full z-50 bg-White top-[104px] translate-x-[-50%] text-center pb-4 md:relative md:bg-none md:flex md:gap-8 md:pb-0 md:top-[0%]"
+          id="nav"
+        >
+          <li class="hover:font-semibold"><a href="#">Collections</a></li>
+          <li class="hover:font-semibold"><a href="#">Men</a></li>
+          <li class="hover:font-semibold"><a href="#">Women</a></li>
+          <li class="hover:font-semibold"><a href="#">About</a></li>
+          <li class="hover:font-semibold"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="flex items-center gap-4 md:gap-8">
+          <div class="z-50 relative cursor-pointer" id="cartBttn">
+            <img src="/images/icon-cart.svg" alt="Cart" class="w-8" />
+            <span
+              class="bg-Orange py-1 px-2 text-xs rounded-full text-White absolute -top-2 -right-2"
+              id="cartCount"
+              >0</span
+            >
+          </div>
+
+          <img src="/images/image-avatar.png" alt="Avatar" class="w-10" />
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      class="md:grid md:grid-cols-2 md:place-items-center min-h-screen md:pt-20"
+    >
+      <section class="md:grid md:place-items-center md:w-[28rem] relative">
+        <!-- PREVIOUS BUTTON -->
+        <img
+          id="previous"
+          src="/images/icon-previous.svg"
+          alt=""
+          class="md:hidden bg-White py-3 px-4 absolute rounded-full left-[1%] top-[45%] translate-x-[50%] translate-y-[-50%]"
+        />
+        <!-- IMAGE DISPLAYED -->
+        <img
+          id="imageDisplay"
+          src="/images/image-product-1.jpg"
+          alt="shoe1-1"
+          class="w-full md:h-[25rem] md:object-cover md:object-center m-auto md:rounded-xl mb-4"
+        />
+        <!-- NEXT BUTTON -->
+        <img
+          id="next"
+          src="/images/icon-next.svg"
+          alt=""
+          class="md:hidden bg-White py-3 px-4 absolute rounded-full right-[1%] top-[45%] translate-x-[-50%] translate-y-[-50%]"
+        />
+        <!-- THUMBNAILS -->
+        <div class="hidden md:grid md:grid-cols-4 md:gap-6">
+          <div class="relative group" id="image-1">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="image-2">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="image-3">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="image-4">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- POP UP -->
+      <section
+        class="hidden top-0 left-0 w-full h-full justify-center items-center flex-col gap-4 absolute bg-black z-50 bg-opacity-60"
+        id="imageContainer"
+      >
+        <!-- WHEN IMAGE IS CLICKED -->
+        <div class="relative">
+          <img
+            src="/images/icon-close.svg"
+            alt=""
+            class="absolute top-[-10%] right-1 bg-White p-2 rounded-full hover:cursor-pointer"
+            id="closeImg"
+          />
+          <!-- PREVIOUS BUTTON -->
+          <img
+            id="previous2"
+            src="/images/icon-previous.svg"
+            alt=""
+            class="bg-White py-3 px-4 absolute rounded-full left-[-8%] top-[50%] translate-x-[50%] translate-y-[-50%] cursor-pointer"
+          />
+          <img
+            src="/images/image-product-1.jpg"
+            alt=""
+            class="w-[30rem] h-[25rem] rounded-lg"
+            id="imagePopup"
+          />
+          <!-- NEXT BUTTON -->
+          <img
+            id="next2"
+            src="/images/icon-next.svg"
+            alt=""
+            class="bg-White py-3 px-4 absolute rounded-full right-[-8%] top-[50%] translate-x-[-50%] translate-y-[-50%] cursor-pointer"
+          />
+        </div>
+        <!-- THUMBNAILS FOR POP UP -->
+        <div class="md:grid md:grid-cols-4 md:gap-6">
+          <div class="relative group" id="thumb-1">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="thumb-2">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="thumb-3">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+
+          <div class="relative group" id="thumb-4">
+            <div class="whiteBG"></div>
+            <img
+              src="/images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="w-24 rounded-md"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="p-8">
+        <h4 class="uppercase tracking-widest text-Orange font-bold mb-6">
+          Sneaker Company
+        </h4>
+        <h2 class="font-bold text-4xl mb-6 md:text-5xl">
+          Fall Limited Edition Sneakers
+        </h2>
+        <p
+          class="text-Dark-grayish-blue text-base tracking-wide mb-6 md:text-lg"
+        >
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="flex justify-between items-center mb-6 md:block">
+          <div class="flex gap-4 items-center">
+            <p class="font-bold text-lg md:text-2xl">$125.00</p>
+            <p
+              class="text-Orange font-bold bg-Pale-orange py-1 px-2 rounded-sm"
+            >
+              50%
+            </p>
+          </div>
+          <p class="text-Grayish-blue font-bold line-through md:text-base">
+            $250.00
+          </p>
+        </div>
+
+        <div class="md:flex md:gap-4">
+          <!-- FOR CART -->
+          <div
+            class="flex bg-Light-grayish-blue w-full justify-between px-4 py-3 rounded-md mb-4 md:w-40"
+          >
+            <!-- CART BUTTONS -->
+            <button id="minus">
+              <img src="/images/icon-minus.svg" alt="" />
+            </button>
+            <p id="qty">0</p>
+            <button id="plus">
+              <img src="/images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="md:w-full hover:scale-[1.01] hover:duration-300">
+            <button
+              class="flex items-center justify-center gap-2 text-white bg-Orange w-full rounded-md px-4 py-3 font-bold"
+              id="cartButton"
+            >
+              <img src="/images/icon-cart-2.svg" alt="" />
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- CART -->
+
+      <section
+        class="hidden absolute top-0 left-0 w-full h-full bg-black z-50 bg-opacity-60"
+        id="cartContainer"
+      >
+        <div
+          class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center bg-White z-50"
+        >
+          <img
+            src="/images/icon-close.svg"
+            alt=""
+            id="closeCart"
+            class="absolute right-2 top-2 cursor-pointer"
+          />
+          <h2 class="font-bold text-Orange text-2xl p-2">CART</h2>
+          <hr />
+          <!-- PRODUCT -->
+          <table
+            class="m-4 rounded-lg flex md:block min-w-[300px]"
+            id="productTable"
+          >
+            <thead class="">
+              <tr
+                class="text-center text-base md:text-lg flex flex-col md:flex md:flex-row items-center justify-around"
+              >
+                <th class="md:w-24"></th>
+                <th class="md:w-[14rem]">Product</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Lawrence</a>.
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>

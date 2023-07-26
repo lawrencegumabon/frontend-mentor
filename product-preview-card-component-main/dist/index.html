@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="output.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-Cream">
+    <main
+      class="max-w-xs bg-white text-sm rounded-lg md:max-w-lg font-Montserrat md:flex"
+    >
+      <img
+        class="rounded-t-lg md:hidden"
+        src="images/image-product-mobile.jpg"
+        alt="Image Mobile"
+      />
+      <img
+        class="rounded-l-lg h-396 hidden md:block"
+        src="images/image-product-desktop.jpg"
+        alt="Image Desktop"
+      />
+      <div class="p-6">
+        <p class="text-Dark-grayish-blue text-xs">P E R F U M E</p>
+        <h1 class="font-bold font-Fraunces text-3xl py-3">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="text-Dark-grayish-blue text-xs tracking-wide leading-5">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex items-center gap-5">
+          <p class="font-Fraunces text-3xl py-3 text-green-900 md:py-5">
+            $149.99
+          </p>
+          <span class="text-sm line-through text-Dark-grayish-blue"
+            >$169.99</span
+          >
+        </div>
+
+        <button
+          class="bg-green-900 text-white font-bold flex text-center justify-center gap-2 w-full py-3 rounded-md hover:bg-green-950 ease-in-out duration-300"
+        >
+          <img src="images/icon-cart.svg" alt="" />Add to Cart
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

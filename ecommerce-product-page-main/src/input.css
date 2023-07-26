@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .whiteBG {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    background-color: White;
+    opacity: 0;
+    border-radius: 6px;
+  }
+
+  .whiteBG:hover {
+    opacity: 0.7;
+    border-color: Orange;
+    border-width: 2px;
+    cursor: pointer;
+  }
+}
