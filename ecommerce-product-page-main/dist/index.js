@@ -14,10 +14,10 @@ updateNavDisplay();
 
 burger.addEventListener("click", () => {
   if (nav.style.display == "none") {
-    burger.src = "/images/icon-close.svg";
+    burger.src = "images/icon-close.svg";
     nav.style.display = "block";
   } else {
-    burger.src = "/images/icon-menu.svg";
+    burger.src = "images/icon-menu.svg";
     nav.style.display = "none";
   }
 });
@@ -28,10 +28,10 @@ window.addEventListener("resize", () => {
 
 // FOR MOBILE VIEW / VIEWING IMAGE
 const imagePaths = [
-  "/images/image-product-1.jpg",
-  "/images/image-product-2.jpg",
-  "/images/image-product-3.jpg",
-  "/images/image-product-4.jpg",
+  "images/image-product-1.jpg",
+  "images/image-product-2.jpg",
+  "images/image-product-3.jpg",
+  "images/image-product-4.jpg",
 ];
 
 let currentIndex = 0;
@@ -195,7 +195,7 @@ addCart.addEventListener("click", () => {
       // FOR IMAGE
       const imageTD = document.createElement("td");
       const productImg = document.createElement("img");
-      productImg.src = "/images/image-product-1.jpg";
+      productImg.src = "images/image-product-1.jpg";
       productImg.alt = "Product Image";
       productImg.className = "hidden md:flex w-24 rounded-md mr-4";
       imageTD.appendChild(productImg);
