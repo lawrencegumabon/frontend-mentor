@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot.png)
+![](dist\images\screenshot.png)
 
 ### Links
 
