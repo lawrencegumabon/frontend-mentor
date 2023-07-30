@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/images/Product%20preview%20card.png)
+![](dist/images/Product%20preview%20card.png)
 
 ### Links
 
