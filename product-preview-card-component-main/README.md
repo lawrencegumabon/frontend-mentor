@@ -23,11 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-<<<<<<< HEAD
-![](dist\images\Product-preview-card.png)
-=======
-![](dist/images/Product%20preview%20card.png)
->>>>>>> 2014260cb2260444929b5dfde718cda4dd158669
+![](dist/images/Product-preview-card.png)
 
 ### Links
 
